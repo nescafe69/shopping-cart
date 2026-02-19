@@ -9,10 +9,6 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-  background-color: #f4f9f4;
-}
-
 /* ============================= */
 /* Navbar */
 /* ============================= */
@@ -28,24 +24,26 @@ body {
 .navbar a {
   color: white;
   text-decoration: none;
-  margin: 0 15px;
+  margin-left: 20px;
   font-weight: 500;
-  transition: 0.3s ease;
 }
 
 .navbar a:hover {
   text-decoration: underline;
-  font-weight: bold;
+}
+
+.logo {
+  color: white;
 }
 
 /* ============================= */
-/* Landing Page */
+/* REQUIRED BACKGROUND CLASS */
 /* ============================= */
 
-.landing-container {
+.background-image {
   height: 100vh;
   width: 100%;
-  background-image: url("./assets/landing-bg.jpg"); /* Add your image here */
+  background-image: url("./assets/landing-bg.jpg"); /* Place image in src/assets */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -55,15 +53,18 @@ body {
   align-items: center;
 }
 
-.landing-overlay {
-  background-color: rgba(0, 0, 0, 0.55);
+/* Overlay for text readability */
+.overlay {
   height: 100%;
   width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* Landing Content */
 .landing-content {
   text-align: center;
   color: white;
@@ -71,21 +72,17 @@ body {
   padding: 20px;
 }
 
-.landing-title {
+.landing-content h1 {
   font-size: 3rem;
   margin-bottom: 20px;
 }
 
-.landing-description {
+.landing-content p {
   font-size: 1.2rem;
-  margin-bottom: 15px;
-}
-
-.landing-subtext {
-  font-size: 1rem;
   margin-bottom: 30px;
 }
 
+/* Buttons */
 .primary-btn {
   padding: 12px 30px;
   border: none;
@@ -100,115 +97,4 @@ body {
 .primary-btn:hover {
   background-color: #43a047;
   transform: scale(1.05);
-}
-
-/* ============================= */
-/* Product Page */
-/* ============================= */
-
-.product-section {
-  padding: 40px;
-}
-
-.product-section h2 {
-  margin-bottom: 20px;
-  color: #2e7d32;
-}
-
-.product-grid {
-  display: flex;
-  gap: 25px;
-  flex-wrap: wrap;
-}
-
-.card {
-  background: white;
-  width: 220px;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  text-align: center;
-  transition: 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.card h3 {
-  margin-bottom: 10px;
-}
-
-.card p {
-  font-size: 0.9rem;
-  margin-bottom: 8px;
-}
-
-/* ============================= */
-/* Cart Page */
-/* ============================= */
-
-.cart-container {
-  padding: 40px;
-}
-
-.cart-card {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  background: white;
-  padding: 15px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-}
-
-.cart-card img {
-  width: 80px;
-  border-radius: 8px;
-}
-
-.cart-details {
-  flex: 1;
-}
-
-.cart-buttons button {
-  margin: 5px;
-  padding: 5px 10px;
-  border: none;
-  background-color: #2e7d32;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.cart-buttons button:hover {
-  background-color: #1b5e20;
-}
-
-.total-section {
-  margin-top: 20px;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-.secondary-btn {
-  margin-top: 15px;
-  margin-right: 10px;
-  padding: 10px 20px;
-  border: none;
-  background-color: #66bb6a;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.secondary-btn:hover {
-  background-color: #43a047;
 }
